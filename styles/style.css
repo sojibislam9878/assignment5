@@ -9,6 +9,7 @@
     color: #1DD100;
 }
 
-/* nav{
-    background-image: url(ass);
-} */
+.sd{
+    box-shadow: 0px 4px #1DD100;
+    border: none;
+}
