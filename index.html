@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body class="font-raleway">
-    <main class="hidden">
+    <main id="main" class="">
       <!-- * nav section start here -->
       <nav
         class="container mx-auto px-4 flex justify-between items-center mt-10"
@@ -221,7 +221,7 @@
                   <div>
                     <img src="assets/images/seat-green.png" alt="" />
                   </div>
-                  <p><span id="setCount">40</span> seats left</p>
+                  <p><span id="seatLeft">40</span> seats left</p>
                 </div>
               </div>
               <!-- ? time and detels -->
@@ -531,7 +531,7 @@
                 <p class="text-lg font-medium font-inter">
                   Seat
                   <span
-                    id="seatCount"
+                    id="seatAdd"
                     class="bg-[#1DD100] text-white p-1 rounded-md"
                     >0</span
                   >
@@ -541,16 +541,10 @@
               </div>
               <!-- selected seats and price -->
               <div class="mt-4">
-                <div
-                  class="grid grid-cols-3 gap-x-20 gap-y-4 text-lg font-medium font-inter opacity-60"
+                <div id="selectedDiv"
+                  class="grid grid-cols-3 gap-x-20 gap-y-4 text-lg font-medium font-inter opacity-60 "
                 >
-                  <p>c2</p>
-                  <p>economy</p>
-                  <p>550</p>
-                  <!-- ================= -->
-                  <p>c2</p>
-                  <p>economy</p>
-                  <p>550</p>
+                <!-- !value will add dinamicly -->
                 </div>
               </div>
               <hr />
@@ -611,7 +605,7 @@
                 />
               </div>
               <div>
-                <button
+                <button id="nextBtn"
                   class="py-5 btn btn-lg rounded-xl mt-6 text-xl font-extrabold text-white bg-[#1DD100] w-full hover:text-black"
                 >
                   Next
@@ -669,7 +663,8 @@
         </div>
       </footer>
     </main>
-    <section id="success" class="bg-gray-200 md:p-32 min-h-screen ">
+    <!-- * success section start here -->
+    <section id="success" class="bg-gray-200 md:p-32 min-h-screen hidden">
       <div class="flex justify-center items-center max-w-screen-xl m-auto md:mt-16 pt-32 md:pt-0"> 
         <div class="bg-white container mx-auto p-4  rounded-xl">
           <div class="flex flex-col justify-center items-center mt-14">
