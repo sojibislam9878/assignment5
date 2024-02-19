@@ -49,7 +49,10 @@ const main = document.getElementById("main");
 const success = document.getElementById("success");
 
 nextBtn.addEventListener("click", function(){
-    if (seatCount > 0 ) {
+    const numberDiv =document.getElementById("numberDiv").value;
+    const numberValue = isNaN(numberDiv);
+    const numberlength =  numberDiv.length;
+    if (seatCount > 0 && numberValue === !true && numberlength === 11 ) {
         console.log("I am clicked");
  main.classList.add("hidden");
  success.classList.remove("hidden");
@@ -59,27 +62,27 @@ nextBtn.addEventListener("click", function(){
     
 })
 
-// copupon code validation
+// coupon code validation
 
 
-const firstCopupon = "NEW15"
-const secondCopupon = "Couple 20"
+const firstCoupon = "NEW15"
+const secondCoupon = "Couple 20"
 const applyBtn = document.getElementById("apply")
-const copuponDiv = document.getElementById("copuponDiv")
+const couponDiv = document.getElementById("couponDiv")
 applyBtn.addEventListener("click" , function(e){
   
-    const copuponCode = document.getElementById("copuponCode").value;
-    console.log(copuponCode);
-    if (copuponCode === firstCopupon && seatCount === 4) {
+    const couponCode = document.getElementById("couponCode").value;
+    console.log(couponCode);
+    if (couponCode === firstCoupon && seatCount === 4) {
     grandPrice -= grandPrice * 0.15;
     console.log(grandPrice);
     setInnerText("grandPrice", grandPrice)
-    copuponDiv.classList.add("hidden")
-    }else if( copuponCode === secondCopupon){
+    couponDiv.classList.add("hidden")
+    }else if( couponCode === secondCoupon){
         grandPrice -= grandPrice * 0.20;
         console.log(grandPrice);
         setInnerText("grandPrice", grandPrice)
-        copuponDiv.classList.add("hidden")
+        couponDiv.classList.add("hidden")
     }
     else{
         alert("enter a valid code and select 4 seats")
