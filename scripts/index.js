@@ -14,8 +14,6 @@ for( const seat of seats){
     seat.addEventListener("click",function(e){
         seatCount+= 1;
         const seatName = e.target.innerText;
-        // setInnerText("nameContainer", seatName)
-        // console.log(seatName);
         console.log(seatCount);
         if (seatCount > 4) {
             return alert("You Can buy only 4 ticket")
@@ -64,18 +62,26 @@ nextBtn.addEventListener("click", function(){
 // copupon code validation
 
 
-
-
+const firstCopupon = "NEW15"
+const secondCopupon = "Couple 20"
 const applyBtn = document.getElementById("apply")
 const copuponDiv = document.getElementById("copuponDiv")
 applyBtn.addEventListener("click" , function(e){
   
     const copuponCode = document.getElementById("copuponCode").value;
     console.log(copuponCode);
-    if (copuponCode === "sojib") {
-    grandPrice -= grandPrice * 0.20;
+    if (copuponCode === firstCopupon && seatCount === 4) {
+    grandPrice -= grandPrice * 0.15;
     console.log(grandPrice);
     setInnerText("grandPrice", grandPrice)
     copuponDiv.classList.add("hidden")
+    }else if( copuponCode === secondCopupon){
+        grandPrice -= grandPrice * 0.20;
+        console.log(grandPrice);
+        setInnerText("grandPrice", grandPrice)
+        copuponDiv.classList.add("hidden")
+    }
+    else{
+        alert("enter a valid code and select 4 seats")
     }
 })
