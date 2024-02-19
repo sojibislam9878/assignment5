@@ -552,17 +552,18 @@
               <div class="flex justify-between mt-4">
                 <p class="text-lg font-medium font-inter">Total Price</p>
                 <p class="text-lg font-medium font-inter">
-                  BDT <span>1100</span>
+                  BDT <span id="totalPrice">0</span>
                 </p>
               </div>
               <!-- copun -->
-              <div class="mt-4 relative">
+              <div id="copuponDiv" class="mt-4 relative">
                 <input
+                  id="copuponCode"
                   class="p-5 w-full rounded-xl"
                   placeholder="Have any copupon code?"
                   type="text"
                 />
-                <button
+                <button id="apply"
                   class="btn bg-[#1DD100] absolute right-2 bottom-2 text-lg font-bold text-white"
                 >
                   Apply
@@ -572,7 +573,7 @@
               <div class="flex justify-between mt-6">
                 <p class="text-lg font-bold font-inter">Grand Total</p>
                 <p class="text-lg font-bold font-inter">
-                  BDT <span>1100</span>
+                  BDT <span id="grandPrice">0</span>
                 </p>
               </div>
             </div>

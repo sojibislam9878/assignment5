@@ -1,28 +1,28 @@
-.font-raleway{
-    font-family: "Raleway", sans-serif;
+.font-raleway {
+  font-family: "Raleway", sans-serif;
 }
 
-.font-inter{
-    font-family: "Inter", sans-serif;
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
-.font-roboto{
-    font-family: "Roboto", sans-serif;
+.font-roboto {
+  font-family: "Roboto", sans-serif;
 }
-.pry-color{
-    color: #1DD100;
+.pry-color {
+  color: #1dd100;
 }
 
-.sd{
-    box-shadow: 0px 4px #1DD100;
-    border: none;
+.sd {
+  box-shadow: 0px 4px #1dd100;
+  border: none;
 }
-#ph-paribahan{
-    box-shadow: 0px -4px #1DD100;
+#ph-paribahan {
+  box-shadow: 0px -4px #1dd100;
 }
 /* html {
     scroll-behavior: smooth;
   }
    */
-   .bg-green{
-     background-color: #1DD100;
-   }
+.bg-green {
+  background-color: #1dd100;
+}

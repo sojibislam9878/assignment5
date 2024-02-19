@@ -4,6 +4,9 @@ const cla = "Economy"
 const price = 550;
 let seatLeft = parseInt(seatLeftElement.innerText);
 let seatCount = 0;
+let totalPrice = parseInt(document.getElementById("totalPrice").innerText);
+let grandPrice =0;
+console.log(grandPrice);
 
 
 for( const seat of seats){
@@ -22,7 +25,6 @@ for( const seat of seats){
         setInnerText("seatAdd", seatCount)
         console.log(seatLeft);
         const selectedDiv = document.getElementById("selectedDiv")
-        console.log(selectedDiv);
         const p = document.createElement("p");
         p.innerText = seatName;
         const p2 =document.createElement("p");
@@ -34,8 +36,15 @@ for( const seat of seats){
         selectedDiv.appendChild(p2);
         selectedDiv.appendChild(p3);
         seat.classList.add("bg-green")
+        totalPrice = totalPrice + 550;
+        grandPrice += 550;
+        setInnerText("totalPrice", totalPrice)
+        setInnerText("grandPrice", totalPrice)
+        console.log(grandPrice);
     });
 }
+
+//  next button validition
 
 const nextBtn = document.getElementById("nextBtn");
 const main = document.getElementById("main");
@@ -52,3 +61,21 @@ nextBtn.addEventListener("click", function(){
     
 })
 
+// copupon code validation
+
+
+
+
+const applyBtn = document.getElementById("apply")
+const copuponDiv = document.getElementById("copuponDiv")
+applyBtn.addEventListener("click" , function(e){
+  
+    const copuponCode = document.getElementById("copuponCode").value;
+    console.log(copuponCode);
+    if (copuponCode === "sojib") {
+    grandPrice -= grandPrice * 0.20;
+    console.log(grandPrice);
+    setInnerText("grandPrice", grandPrice)
+    copuponDiv.classList.add("hidden")
+    }
+})
