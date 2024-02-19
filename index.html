@@ -12,9 +12,12 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- * google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- * google icons -->
     <link
       rel="stylesheet"
@@ -145,7 +148,7 @@
                 />
               </div>
               <div>
-                <h1 class=" pt-20 md:px-6 text-sm md:text-2xl font-semibold">
+                <h1 class="pt-20 md:px-6 text-sm md:text-2xl font-semibold">
                   NEW15
                 </h1>
                 <p class="mt-2 text-sm font-inter">Coupon Code</p>
@@ -188,7 +191,10 @@
         </div>
       </scetion>
       <!-- * ph paribahan section -->
-      <section id="ph-paribahan" class="bg-[#F7F8F8] mt-8 md:mt-32 rounded-t-3xl pb-32">
+      <section
+        id="ph-paribahan"
+        class="bg-[#F7F8F8] mt-8 md:mt-32 rounded-t-3xl pb-32"
+      >
         <div class="container mx-auto p-4">
           <!-- ! title and description -->
           <div class="text-center md:pt-32 pt-10">
@@ -203,8 +209,12 @@
             <!-- ? left sction -->
             <div class="p-8 md:mt-6">
               <!-- ? car and set count -->
-              <div class="flex flex-col md:flex-row justify-between items-center lg:w-full">
-                <div class="flex flex-col md:flex-row lg:gap-3 lg:justify-between lg:items-center">
+              <div
+                class="flex flex-col md:flex-row justify-between items-center lg:w-full"
+              >
+                <div
+                  class="flex flex-col md:flex-row lg:gap-3 lg:justify-between lg:items-center"
+                >
                   <div class="flex justify-center items-center pb-3 md:pb-0">
                     <img src="assets/images/bus-logo.png" alt="" />
                   </div>
@@ -226,11 +236,15 @@
               </div>
               <!-- ? time and detels -->
               <div class="bg-[#F7F8F8] p-8 rounded-xl mt-6 w-full">
-                <div class="flex flex-col md:flex-row justify-between border-b border-dashed pb-3">
+                <div
+                  class="flex flex-col md:flex-row justify-between border-b border-dashed pb-3"
+                >
                   <p class="text-lg font-semibold opacity-70">Route</p>
                   <p class="text-lg font-semibold">Dhaka - Sylhet</p>
                 </div>
-                <div class="flex flex-col md:flex-row justify-between border-b border-dashed py-3">
+                <div
+                  class="flex flex-col md:flex-row justify-between border-b border-dashed py-3"
+                >
                   <p class="text-lg font-semibold opacity-70">Departure Time</p>
                   <p class="text-lg font-semibold">9:00 PM</p>
                 </div>
@@ -541,10 +555,11 @@
               </div>
               <!-- selected seats and price -->
               <div class="mt-4">
-                <div id="selectedDiv"
-                  class="grid grid-cols-3 md:gap-x-56 lg:gap-x-20 gap-y-4 text-lg font-medium font-inter opacity-60 "
+                <div
+                  id="selectedDiv"
+                  class="grid grid-cols-3 gap-x-56 lg:gap-x-20 gap-y-4 text-lg font-medium font-inter opacity-60"
                 >
-                <!-- !value will add dinamicly -->
+                  <!-- !value will add dinamicly -->
                 </div>
               </div>
               <hr />
@@ -555,6 +570,14 @@
                   BDT <span id="totalPrice">0</span>
                 </p>
               </div>
+              <div id="discountDiv" class="hidden">
+                <div class="flex justify-between mt-4">
+                  <p class="text-lg font-medium font-inter">Total discount</p>
+                  <p class="text-lg font-medium font-inter">
+                    BDT <span id="discountAmount">0</span>
+                  </p>
+                </div>
+              </div>
               <!-- copun -->
               <div id="couponDiv" class="mt-4 md:relative">
                 <input
@@ -563,8 +586,9 @@
                   placeholder="Have any coupon code?"
                   type="text"
                 />
-                <button id="apply"
-                  class="btn mt-4 md:mt-0 w-full md:w-auto  bg-[#1DD100] md:absolute right-2 bottom-2 text-lg font-bold text-white"
+                <button
+                  id="apply"
+                  class="btn mt-4 md:mt-0 w-full md:w-auto bg-[#1DD100] md:absolute right-2 bottom-2 text-lg font-bold text-white"
                 >
                   Apply
                 </button>
@@ -607,7 +631,8 @@
                 />
               </div>
               <div>
-                <button id="nextBtn"
+                <button
+                  id="nextBtn"
                   class="py-5 btn btn-lg rounded-xl mt-6 text-xl font-extrabold text-white bg-[#1DD100] w-full hover:text-black"
                 >
                   Next
@@ -667,23 +692,39 @@
     </main>
     <!-- * success section start here -->
     <section id="success" class="bg-gray-200 md:p-32 min-h-screen hidden">
-      <div class="flex justify-center items-center max-w-screen-xl m-auto md:mt-16 pt-32 md:pt-0"> 
-        <div class="bg-white container mx-auto p-4  rounded-xl">
+      <div
+        class="flex justify-center items-center max-w-screen-xl m-auto md:mt-16 pt-32 md:pt-0"
+      >
+        <div class="bg-white container mx-auto p-4 rounded-xl">
           <div class="flex flex-col justify-center items-center mt-14">
-            <img src="assets/images/success.png" alt="">
-            <h1 class="text-2xl font-bold text-[#27AE60] mt-10 uppercase font-roboto">success</h1>
+            <img src="assets/images/success.png" alt="" />
+            <h1
+              class="text-2xl font-bold text-[#27AE60] mt-10 uppercase font-roboto"
+            >
+              success
+            </h1>
           </div>
           <div class="mt-9">
-            <p class="text-center text-xl font-bold font-roboto max-w-xl mx-auto">Thank you for Booking Our Bus Seats. 
-              We are working hard to find the best service and deals for you.
+            <p
+              class="text-center text-xl font-bold font-roboto max-w-xl mx-auto"
+            >
+              Thank you for Booking Our Bus Seats. We are working hard to find
+              the best service and deals for you.
             </p>
-            <p class="text-center text-xl font-semibold opacity-70 font-roboto mt-5">
+            <p
+              class="text-center text-xl font-semibold opacity-70 font-roboto mt-5"
+            >
               Shortly you will find a confirmation in your email.
             </p>
           </div>
-            <div class="w-full text-center mt-5 pb-14">
-              <button id="successBtn" class="btn w-1/2 rounded-full bg-[#27AE60] text-white text-xl font-roboto font-semibold">Continue</button>
-            </div>
+          <div class="w-full text-center mt-5 pb-14">
+            <button
+              id="successBtn"
+              class="btn w-1/2 rounded-full bg-[#27AE60] text-white text-xl font-roboto font-semibold"
+            >
+              Continue
+            </button>
+          </div>
         </div>
       </div>
     </section>
