@@ -16,7 +16,7 @@ for( const seat of seats){
         const seatName = e.target.innerText;
         console.log(seatCount);
         if (seatCount > 4) {
-            return alert("You Can buy only 4 ticket")
+            return alert("You can buy only 4 tickets")
         }
         seatLeft -= 1;
         setInnerText("seatLeft", seatLeft )
@@ -87,4 +87,11 @@ applyBtn.addEventListener("click" , function(e){
     else{
         alert("enter a valid code and select 4 seats")
     }
+})
+
+// success btn validation
+
+const successBtn =document.getElementById("successBtn");
+successBtn.addEventListener("click", function(){
+    location.reload()
 })
