@@ -54,7 +54,6 @@ nextBtn.addEventListener("click", function () {
   const numberValue = isNaN(numberDiv);
   const numberlength = numberDiv.length;
   if (seatCount > 0 && numberValue === !true && numberlength >= 11) {
-    console.log("I am clicked");
     main.classList.add("hidden");
     success.classList.remove("hidden");
   } else {
@@ -72,7 +71,6 @@ const discountDiv = document.getElementById("discountDiv");
 
 applyBtn.addEventListener("click", function (e) {
   const couponCode = document.getElementById("couponCode").value;
-  console.log(couponCode);
 
   if (couponCode === firstCoupon && seatCount === 4) {
     const discount = grandPrice * 0.15;
