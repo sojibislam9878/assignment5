@@ -6,22 +6,24 @@ let seatLeft = parseInt(seatLeftElement.innerText);
 let seatCount = 0;
 let totalPrice = parseInt(document.getElementById("totalPrice").innerText);
 let grandPrice =0;
-console.log(grandPrice);
-
+let selectedSeats = [];
 
 for( const seat of seats){
     
     seat.addEventListener("click",function(e){
-        seatCount+= 1;
         const seatName = e.target.innerText;
-        console.log(seatCount);
+        for ( const selectedSeat of selectedSeats){
+            if (seatName === selectedSeat) {
+                return
+            }
+        }
+        seatCount+= 1;
         if (seatCount > 4) {
             return alert("You can buy only 4 tickets")
         }
         seatLeft -= 1;
         setInnerText("seatLeft", seatLeft )
         setInnerText("seatAdd", seatCount)
-        console.log(seatLeft);
         const selectedDiv = document.getElementById("selectedDiv")
         const p = document.createElement("p");
         p.innerText = seatName;
@@ -38,7 +40,7 @@ for( const seat of seats){
         grandPrice += 550;
         setInnerText("totalPrice", totalPrice)
         setInnerText("grandPrice", totalPrice)
-        console.log(grandPrice);
+        selectedSeats.push(seatName)
     });
 }
 
