@@ -33,6 +33,22 @@ for( const seat of seats){
         selectedDiv.appendChild(p);
         selectedDiv.appendChild(p2);
         selectedDiv.appendChild(p3);
+        seat.classList.add("bg-green")
     });
 }
+
+const nextBtn = document.getElementById("nextBtn");
+const main = document.getElementById("main");
+const success = document.getElementById("success");
+
+nextBtn.addEventListener("click", function(){
+    if (seatCount > 0 ) {
+        console.log("I am clicked");
+ main.classList.add("hidden");
+ success.classList.remove("hidden");
+    }else{
+        alert("Select seats and give phone number")
+    }
+    
+})
 
