@@ -79,7 +79,7 @@ applyBtn.addEventListener("click", function (e) {
     couponDiv.classList.add("hidden");
     discountDiv.classList.remove("hidden");
     setInnerText("discountAmount", discount);
-  } else if (couponCode === secondCoupon) {
+  } else if (couponCode === secondCoupon && seatCount === 4) {
     discount2 = grandPrice * 0.2;
     const finalGrandPrice2 = grandPrice - discount2;
     setInnerText("grandPrice", finalGrandPrice2);
